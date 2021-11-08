@@ -15,15 +15,19 @@
 
 PROJECT=your-project
 REGION=us-central1
-INPUT_BUCKET=your-bucket
-INPUT_FOLDER=your/input/folder
-OUTPUT_BUCKET=your-bucket
-OUTPUT_FOLDER=your/output/folder
+INPUT_BUCKET=your-input-bucket
+INPUT_FOLDER=your/input/folder/with/original/images
+OUTPUT_BUCKET=your-output-bucket
+OUTPUT_FOLDER=your/output/folder/where/tiles/will/be/stored
+BIGQUERY_PROJECT=your-bigquery-project-name
+BIGQUERY_DATASET=your-bigquery-dataset
+BIGQUERY_TABLE=your-bigquery-table-with-image-metadata (barcode, imagecode, filename, path, width, height, md5)
+FINAL_BUCKET=your-final-bucket-to-move-original-input-images
 FILE_EXTENSIONS=jpg,png,tif
 NUM_WORKERS=10
-STAGING_BUCKET=your-bucket
-STAGING_FOLDER=staging
-TEMP_BUCKET=your-bucket
-TEMP_FOLDER=tmp
+STAGING_BUCKET=your-staging-bucket
+STAGING_FOLDER=your/staging/folder
+TEMP_BUCKET=your-temp-bucket
+TEMP_FOLDER=your/temp/folder
 GOOGLE_APPLICATION_CREDENTIALS=/your/key/path.json
 JOB_NAME=job-name
